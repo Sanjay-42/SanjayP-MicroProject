@@ -1,0 +1,97 @@
+H1{
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(240, 230, 140,0.5);
+    font-family:c;
+    font-weight: bold;
+}
+/* .details{
+    position: absolute;
+    border: 2px solid;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    width: 720px;
+    height: 570px;
+    padding: 10px;
+} */
+/* .button{
+    display: flex;
+    justify-content: space-evenly;
+} */
+button{
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* .passenger{
+    border: 2px solid;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    left: 780px;
+    width: 680px;
+    height: 570px;
+    padding: 10px;
+} */
+h1{
+    text-align: center;
+}
+label{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family:cursive;
+    padding-top: 5px;
+}
+/* h3{
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+    font-family:cursive;
+} */
+/* .image{
+    background-image: url("https://wallpapers.com/images/hd/avianca-airline-airbus-a330-300-plane-landing-gear-4hys3qdrgls8p9p3.jpg");
+}
+ */
+.div1{
+    display: flex;
+    width: 95pc;
+    height: 40pc;
+    padding-top:10px;
+}
+ .container{
+   width:35pc ;
+   border-radius: 10px;
+   background-color:rgb(0, 0, 0,0.1);
+
+ }  
+ .output{
+    width: 50pc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(0, 0, 0,0.1);
+    padding-top: 10px;
+ }
+ h2{
+    color:black;
+    font-family: cursive;
+    font-weight: bold;
+    color: white;
+}
+body{
+    background-image: url("https://wallpapers.com/images/hd/avianca-airline-airbus-a330-300-plane-landing-gear-4hys3qdrgls8p9p3.jpg");
+    background-size: cover;
+}
+input{
+    background-color:rgb(255, 255, 255,0.4);
+    color:black;
+}
+td{
+    color: white;
+    font-weight: bold;
+}
+h3{
+    background-color: rgb(248, 248, 9,0.8);
+    color:rgb(0, 0, 0);
+}

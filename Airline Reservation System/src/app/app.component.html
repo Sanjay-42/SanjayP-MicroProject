@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+  <body>
+    <h1>Airline Reservation System</h1>
+    <div class="div1">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <form #myForm="ngForm">
+            <div class="form-group">
+              <label for="">Name:</label><br>
+              <input type="text" name="airId" #airId="ngModel" ngModel required />
+            </div>
+            <div *ngIf="airId.touched">
+              <div *ngIf="airId.errors?.['required']">
+                <b style="color:red;">Name Required.</b>
+              </div>
+              <div *ngIf="airId.errors?.['pattern']">
+                <font color="red"><b>Invalid Name.</b></font>
+            </div>
+            </div>          
+            <div class="form-group">
+              <label for="">Age:</label><br>
+              <input type="age" name="airAge" #airAge="ngModel" ngModel required pattern="[0-9]+"/>
+            </div>
+            <div *ngIf="airAge.touched">
+              <div *ngIf="airAge.errors?.['required']">
+                <b style="color:red;">Age Required.</b>
+              </div>
+              <div *ngIf="airAge.errors?.['pattern']">
+                <font color="red"><b>Invalid Age.</b></font>
+            </div>
+            </div>          
+            <div class="form-group">
+              <label for="">From:</label><br>
+              <input type="text" name="airFrom" #airFrom="ngModel" ngModel required />
+            </div>
+            <div *ngIf="airFrom.touched">
+              <div *ngIf="airFrom.errors?.['required']">
+                <b style="color:red;">From Area Required.</b>
+              </div>
+              <div *ngIf="airFrom.errors?.['pattern']">
+                <font color="red"><b>Invalid Area.</b></font>
+            </div>
+            </div>          
+            <div class="form-group">
+              <label for="">Destination:</label><br>
+              <input type="text" name="airDes" #airDes="ngModel" ngModel required />
+            </div>
+            <div *ngIf="airDes.touched">
+              <div *ngIf="airDes.errors?.['required']">
+                <b style="color:red;">Destination Area Required.</b>
+              </div>
+              <div *ngIf="airDes.errors?.['pattern']">
+                <font color="red"><b>Invalid Area.</b></font>
+            </div>
+            </div>          
+            <div class="form-group">
+              <label for="">Date:</label><br>
+              <input type="date" name="airDate" #airDate="ngModel" ngModel required pattern="[0-9]+"/>
+            </div>
+            <!-- <div *ngIf="dateId.touched">
+              <div *ngIf="dateId.errors?.['required']">
+                <b style="color:gray;">Date Required.</b>
+              </div> 
+              <div *ngIf="dateId.errors?.['pattern']">
+                <font color="gray"><b>Invalid Date.</b></font>
+            </div>
+            </div> <br>         -->
+            <br>
+            <button class="btn btn-success" (click)="insertAirline(myForm.value)">Insert</button>&nbsp;&nbsp;
+            <button class="btn btn-primary" (click)="updateAirline(myForm.value)">Update</button>&nbsp;&nbsp;
+            <button class="btn btn-danger" (click)="deleteAirline(myForm.value)">Delete</button>&nbsp;&nbsp;
+            <button class="btn btn-warning" (click)="findAirline(myForm.value)">Find</button>&nbsp;&nbsp;
+            <button class="btn btn-info" (click)="findAllAirline()">Find All</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="output">
+      <h2>Passenger Details</h2><hr>
+    <h3>{{result}}</h3>
+     <!-- {{airline.nameId}} - {{airline.ageId}} - {{airline.fromId}} - {{airline.destinationId}} - {{airline.dateId}} -->
+    <div style="width: 100%;" *ngIf="flag">
+      <table width="80%" align="center" class="table table-borderd">
+       <tr><th>Passenger Name</th><th>Passenger Age</th><th>Passenger Started</th><th>Passenger Destination</th><th>Date</th></tr> 
+        <tr *ngFor="let airline of airlineArr">
+            <td> {{airline.id}} </td><td> {{airline.airAge}} </td><td> {{airline.airFrom}} </td><td> {{airline.airDes}} </td><td> {{airline.airDate}} </td>
+        </tr>
+     </table>
+     </div>
+    </div>
+    </div>
+</body>
+</html>

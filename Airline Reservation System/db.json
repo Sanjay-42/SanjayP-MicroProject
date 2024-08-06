@@ -1,0 +1,18 @@
+{
+  "airlines": [
+    {
+      "id": "praveen",
+      "airAge": "21",
+      "airFrom": "ksr",
+      "airDes": "cbe",
+      "airDate": "2024-08-05"
+    },
+    {
+      "id": "Sanjay",
+      "airAge": "21",
+      "airFrom": "Bangalore",
+      "airDes": "Hydradad",
+      "airDate": "2024-08-06"
+    }
+  ]
+}
